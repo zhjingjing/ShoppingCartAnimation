@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="data"
+            type="com.cart.animation.bean.ShopBean"/>
+        <variable
+            name="position"
+            type="int"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@{data.name}"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shop_name"
+            android:layout_marginLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{`¥`+data.price}"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_shop_price"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_remove"
+                android:id="@+id/iv_remove"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/tv_shop_num"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add"
+                android:id="@+id/iv_add"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#EAEAEA"
+            />
+    </RelativeLayout>
+</layout>
